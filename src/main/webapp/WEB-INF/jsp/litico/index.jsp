@@ -16,18 +16,39 @@
 	rel="stylesheet">
 <link href="resources/css/materialize.css" type="text/css"
 	rel="stylesheet" media="screen,projection" />
-<link href="../resources/css/style.css" type="text/css" rel="stylesheet"
+<link href="resources/css/style.css" type="text/css" rel="stylesheet"
 	media="screen,projection" />
 </head>
 <body>
 
-	<h2>Bem Vindo</h2>
-
-	<ul>
-		<li><a href="<c:url value="/liticos/lista"/>">Lista liticos</a></li>
-		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa liticos</a></li>
+	<!-- Dropdown Structure -->
+	<ul id="dropdown1" class="dropdown-content">
+		<li><a href="#!">Contato</a></li>
+		<li><a href="#!">Sobre</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Monkey</a></li>
 	</ul>
 
+	<nav>
+	<ul id="nav-mobile" class="side-nav">
+		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa</a></li>
+		<li><a href="<c:url value="/liticos/lista"/>">Lista</a></li>
+	</ul>
+	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
+		class="material-icons">menu</i></a>
+	</div>
+	<div class="nav-wrapper green">
+		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
+			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
+			<li><a class="dropdown-button" href="#!"
+				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
+		</ul>
+		</ul>
+	</div>
+	</nav>
+	<h1>ola</h1>
 	<footer class="page-footer green">
 	<div class="container">
 		<div class="row">
