@@ -80,9 +80,16 @@ public class LiticoDao {
 
 	@SuppressWarnings("unchecked")
 	public List<Litico> busca(String nome) {
-		return session.createCriteria(Litico.class)
-				.add(Restrictions.ilike("nome", nome, MatchMode.ANYWHERE))
+		return session
+				.createCriteria(Litico.class)
+				.add(Restrictions.or(
+						Restrictions.ilike("nome", nome, MatchMode.ANYWHERE),
+						Restrictions.ilike("partido", nome, MatchMode.ANYWHERE)))
 				.list();
+		// return session.createCriteria(Litico.class)
+		// .add(Restrictions.ilike("nome", nome, MatchMode.ANYWHERE))
+		// .add(Restrictions.ilike("partido", nome, MatchMode.ANYWHERE))
+		// .list();
 	}
 	// @SuppressWarnings("unchecked")
 	// public List<Litico> busca(String nome) {

@@ -48,42 +48,27 @@
 		</ul>
 	</div>
 	</nav>
-	<table>
-		<tbody>
-			<tr>
-<!-- 				<th>Nome</th> -->
-<!-- 				<th>partido</th> -->
-<!-- 				<th>Opção</th> -->
-			</tr>
-			<c:forEach items="${liticoList}" var="litico">
-				<tr>
-<%-- 					<td>${litico.nome }</td> --%>
-<%-- 					<td>${litico.partido }</td> --%>
 
-					<ul class="collection with-header">
-						<!--         <li class="collection-header"><h4>First Names</h4></li> -->
-						<li class="collection-item"><div>${litico.nome }<a
-									href="<c:url value="/liticos/${litico.id}"/>"
-									class="secondary-content"><i class="material-icons">mode_edit</i>
-							<form action="<c:url value="/liticos/${litico.id}"/>"
-								method="POST">
-								<i class="link material-icons" name="_method" value="DELETE">delete</i>
-									</button>
-							</form></a>
-							</li>
-							</div>
-					</ul>
-					<%-- 					<td><a href="<c:url value="/liticos/${litico.id}"/>"> --%>
-					<!-- 							Editar </a></td> -->
-<%-- 					<td><form action="<c:url value="/liticos/${litico.id}"/>" --%>
-<!-- 							method="POST"> -->
-<!-- 							<button class="link" name="_method" value="DELETE"> -->
-<!-- 								Remover</button> -->
-<!-- 						</form></td> -->
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+	<c:forEach items="${liticoList}" var="litico">
+		<ul class="collection" >
+			<li class="collection-item avatar"><img src="#" alt=""
+				class="circle"> <span class="title"><a
+					href="<c:url value="/liticos/${litico.id}"/>"> ${litico.nome }
+				</a></span>
+
+				<p>
+					${litico.partido } <br>
+				</p>
+
+				<form action="<c:url value="/liticos/${litico.id}"/>" method="POST"
+					class="secondary-content">
+					<a class="btn-floating halfway-fab waves-effect waves-light red"
+						name="_method" value="DELETE"><i class="material-icons">delete</i></a>
+
+				</form></li>
+		</ul>
+	</c:forEach>
+
 	<footer class="page-footer green">
 	<div class="container">
 		<div class="row">
@@ -121,7 +106,7 @@
 
 	<!--  Scripts-->
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="resources/js/materialize.js"></script>
-	<script src="resources/js/init.js"></script>
+	<script src="../resources/js/materialize.js"></script>
+	<script src="../resources/js/init.js"></script>
 </body>
 </html>

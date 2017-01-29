@@ -2,14 +2,54 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+<title>Facelitico</title>
+
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="../resources/css/materialize.css" type="text/css"
+	rel="stylesheet" media="screen,projection" />
+<link href="../resources/css/style.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
 </head>
 <body>
+
+	<!-- Dropdown Structure -->
+	<ul id="dropdown1" class="dropdown-content">
+		<li><a href="#!">Contato</a></li>
+		<li><a href="#!">Sobre</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Monkey</a></li>
+	</ul>
+
+	<nav>
+	<ul id="nav-mobile" class="side-nav">
+		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa</a></li>
+		<li><a href="<c:url value="/liticos/lista"/>">Lista</a></li>
+		<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
+	</ul>
+	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
+		class="material-icons">menu</i></a>
+	</div>
+	<div class="nav-wrapper green">
+		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
+			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
+			<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
+			<li><a class="dropdown-button" href="#!"
+				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
+		</ul>
+		</ul>
+	</div>
+	</nav>
 
 	<div id="erros">
 		<ul>
@@ -19,26 +59,68 @@
 		</ul>
 	</div>
 
-	<table>
-		<tbody>
-			<ul>
-				<li><a href="<c:url value="/liticos/lista"/>">Lista liticos</a></li>
-				<li><a href="<c:url value="/liticos"/>">Home </a></li>
-			</ul>
-			<form action="<c:url value="/liticos/${litico.id }"/>" method="POST">
-				<fieldset>
-					<legend>Editar litico</legend>
-					<input type="hidden" name="litico.id" value="${litico.id }" /> <label
+	<div class="row">
+		<form class="col s12" action="<c:url value="/liticos/${litico.id}"/>"
+			method="POST">
+			<div class="row">
+				<div class="input-field col s12">
+					<input type="hidden" name="litico.id" value="${litico.id}"/> <label
 						for="nome">Nome:</label> <input id="nome" type="text"
-						name="litico.nome" value="${litico.nome} " /> <label
-						for="partido">Partido:</label> <input id="partido" type="text"
-						name="litico.partido" value="${litico.partido} " />
+						class="validate" name="litico.nome" value="${litico.nome}"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+
+					<label for="partido">Partido:</label> <input id="partido"
+						type="text" class="validate" name="litico.partido"
+						value="${litico.partido}" />
 
 					<button type="submit" name="_method" value="PUT">Enviar</button>
+				</div>
+			</div>
 
-				</fieldset>
-			</form>
-		</tbody>
-	</table>
+		</form>
+	</div>
+
+	<footer class="page-footer green">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">FaceLitico</h5>
+				<p class="grey-text text-lighten-4">Tentado fazer a diferença na
+					poli­tica.</p>
+			</div>
+
+			<div class="col l3 s12">
+				<h5 class="white-text">Relacionados</h5>
+				<ul>
+					<li><a class="white-text" href="#!">Monkey Mind</a></li>
+				</ul>
+			</div>
+
+			<div class="col l3 s12">
+				<h5 class="white-text">Acompanhe</h5>
+				<ul>
+					<li><a class="white-text" href="#!">Facebook</a></li>
+					<li><a class="white-text" href="#!">Twitter</a></li>
+					<!-- <li><a class="white-text" href="#!">Linkedin</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-copyright">
+		<div class="container">
+			Produzido por <a class="#000000 black-text text-lighten-3"
+				href="www.monkeymind.com.br">Monkey Mind Co.</a>
+		</div>
+	</div>
+	</footer>
+
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="../resources/js/materialize.js"></script>
+	<script src="../resources/js/init.js"></script>
 </body>
 </html>

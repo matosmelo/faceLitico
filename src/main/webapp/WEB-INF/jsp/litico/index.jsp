@@ -33,6 +33,7 @@
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa</a></li>
 		<li><a href="<c:url value="/liticos/lista"/>">Lista</a></li>
+		<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
@@ -42,6 +43,7 @@
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
 			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
+			<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
 			<li><a class="dropdown-button" href="#!"
 				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 		</ul>
@@ -86,7 +88,7 @@
 
 	<!--  Scripts-->
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="resources/js/materialize.js"></script>
-	<script src="resources/js/init.js"></script>
+	<script src="../resources/js/materialize.js"></script>
+	<script src="../resources/js/init.js"></script>
 </body>
 </html>

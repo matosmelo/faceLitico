@@ -25,6 +25,7 @@ public class LiticoController {
 		this.result = result;
 		this.validator = validator;
 	}
+
 	// Index
 	@Get("liticos")
 	public void index() {
@@ -42,20 +43,8 @@ public class LiticoController {
 	}
 
 	// Adiciona litico
-	@Post("/liticos")
+	@Post("/liticos/novo")
 	public void adiciona(final Litico litico) {
-		// if (litico.getNome() == null) {
-		// validator.add(new ValidationMessage("O nome não pode ser nulo",
-		// "nome.descricao"));
-		// }
-		//
-		// if (litico.getPartido() == null) {
-		// validator.add(new ValidationMessage("O partido não pode ser nulo",
-		// "partido.descricao"));
-		// }
-		//
-		// validator.onErrorUsePageOf(LiticoController.class).formulario();
-
 		validator.validate(litico);
 		validator.onErrorUsePageOf(LiticoController.class).formulario();
 		dao.salva(litico);
@@ -88,16 +77,15 @@ public class LiticoController {
 		dao.remove(litico);
 		result.redirectTo(this).lista();
 	}
-	
+
 	@Get("/liticos/pesquisa")
 	public void pesquisa() {
 	}
-	
+
 	@Get
 	@Path("/liticos/busca")
-	public List<Litico> busca(String nome){
-		System.out.println(nome);
+	public List<Litico> busca(String nome) {
 		return dao.busca(nome);
-			
+
 	}
 }
