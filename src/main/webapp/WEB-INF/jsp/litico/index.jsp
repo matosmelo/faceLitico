@@ -29,7 +29,7 @@
 		<li><a href="#!">Monkey</a></li>
 	</ul>
 
-	<nav>
+	<nav class="green">
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa</a></li>
 		<li><a href="<c:url value="/liticos/lista"/>">Lista</a></li>
@@ -38,8 +38,8 @@
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
 	</div>
-	<div class="nav-wrapper green">
-		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
+	<div class="nav-wrapper green container">
+		<a id="logo-container" href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
 			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
@@ -50,7 +50,33 @@
 		</ul>
 	</div>
 	</nav>
-	<div class="row">
+	<div class="row container">
+		<div class="col m6">
+			<div class="card blue-grey darken-1">
+				<div class="card-content white-text">
+					<span class="card-title">Card Title</span>
+					<p>I am a very simple card. I am good at containing small bits
+						of information. I am convenient because I require little markup to
+						use effectively.</p>
+				</div>
+				<div class="card-action">
+					<a href="#">This is a link</a> <a href="#">This is a link</a>
+				</div>
+			</div>
+		</div>
+		<div class="col m6">
+			<div class="card blue-grey darken-1">
+				<div class="card-content white-text">
+					<span class="card-title">Card Title</span>
+					<p>I am a very simple card. I am good at containing small bits
+						of information. I am convenient because I require little markup to
+						use effectively.</p>
+				</div>
+				<div class="card-action">
+					<a href="#">This is a link</a> <a href="#">This is a link</a>
+				</div>
+			</div>
+		</div>
 		<div class="col m6">
 			<div class="card blue-grey darken-1">
 				<div class="card-content white-text">

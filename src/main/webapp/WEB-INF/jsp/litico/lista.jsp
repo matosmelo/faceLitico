@@ -29,15 +29,14 @@
 		<li><a href="#!">Monkey</a></li>
 	</ul>
 
-	<nav>
+	<nav class="green">
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa</a></li>
 		<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
-	</div>
-	<div class="nav-wrapper green">
+	<div class="nav-wrapper green container">
 		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
@@ -48,26 +47,88 @@
 		</ul>
 	</div>
 	</nav>
+	<div class="row container">
+		<c:forEach items="${liticoList}" var="litico">
+			<div id="profile-card" class="card col m6">
+				<div class="card #f5f5f5 grey lighten-4">
+					<div class="card-content">
+						<img src="../resources/imagens/felipePequeno.jpg" alt=""
+							class="circle responsive-img activator card-profile-image">
+						<a
+							class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+							<i class="mdi-action-account-circle"></i> <
+						</a> <span class="card-title activator grey-text text-darken-4"><a
+							href="<c:url value="/liticos/${litico.id}"/>"> ${litico.nome }
+						</a></span>
 
-	<c:forEach items="${liticoList}" var="litico">
-		<ul class="collection" >
-			<li class="collection-item avatar"><img src="#" alt=""
-				class="circle"> <span class="title"><a
-					href="<c:url value="/liticos/${litico.id}"/>"> ${litico.nome }
-				</a></span>
+						<p>
+							<i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+							Presidente
+						</p>
+						<p>
+							<i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+							${litico.partido }
+						</p>
+						<p>
+							<i class="mdi-communication-email cyan-text text-darken-2"></i>
+							mail@domain.com
+						</p>
 
-				<p>
-					${litico.partido } <br>
-				</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">${litico.nome }<i
+							class="mdi-navigation-close right"></i>
+						</span>
+						<p>Mais informações do politico</p>
+						<p>
+							<i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+							Presidente
+						</p>
+						<p>
+							<i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+							+5511 9999-9999
+						</p>
+						<p>
+							<i class="mdi-communication-email cyan-text text-darken-2"></i>
+							mail@domain.com
+						</p>
+						<p>
+							<i class="mdi-social-cake cyan-text text-darken-2"></i> 21
+							Dezembro 1988
+						</p>
+						<p>
+						<form action="<c:url value="/liticos/${litico.id}"/>"
+							method="POST" class="secondary-content">
+							<a class="btn-floating halfway-fab waves-effect waves-light red"
+								name="_method" value="DELETE"><i class="material-icons">delete</i></a>
 
-				<form action="<c:url value="/liticos/${litico.id}"/>" method="POST"
-					class="secondary-content">
-					<a class="btn-floating halfway-fab waves-effect waves-light red"
-						name="_method" value="DELETE"><i class="material-icons">delete</i></a>
+						</form>
 
-				</form></li>
-		</ul>
-	</c:forEach>
+
+					</div>
+				</div>
+			</div>
+		</c:forEach>
+	</div>
+	<%-- 	<c:forEach items="${liticoList}" var="litico"> --%>
+	<!-- 		<ul class="collection container"> -->
+	<!-- 			<li class="collection-item avatar"><img src="#" alt="" -->
+	<!-- 				class="circle"> <span class="title"><a -->
+	<%-- 					href="<c:url value="/liticos/${litico.id}"/>"> ${litico.nome } --%>
+	<!-- 				</a></span> -->
+
+	<!-- 				<p> -->
+	<%-- 					${litico.partido } <br> --%>
+	<!-- 				</p> -->
+
+	<%-- 				<form action="<c:url value="/liticos/${litico.id}"/>" method="POST" --%>
+	<!-- 					class="secondary-content"> -->
+	<!-- 					<a class="btn-floating halfway-fab waves-effect waves-light red" -->
+	<!-- 						name="_method" value="DELETE"><i class="material-icons">delete</i></a> -->
+
+	<!-- 				</form></li> -->
+	<!-- 		</ul> -->
+	<%-- 	</c:forEach> --%>
 
 	<footer class="page-footer green">
 	<div class="container">
