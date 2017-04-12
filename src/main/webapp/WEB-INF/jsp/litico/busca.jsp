@@ -29,7 +29,7 @@
 		<li><a href="#!">Monkey</a></li>
 	</ul>
 
-	<nav>
+	<nav class="green">
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa</a></li>
 		<li><a href="<c:url value="/liticos/lista"/>">Lista</a></li>
@@ -38,7 +38,7 @@
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
 	</div>
-	<div class="nav-wrapper green">
+	<div class="nav-wrapper green container">
 		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
@@ -53,17 +53,59 @@
 
 	<!-- 	Mostra valores da pagina lista  -->
 	<%-- 	<%@ include file="lista.jsp"%> --%>
-	<div id="resultadoBusca">
+	<div id="resultadoBusca" class="row container">
+		<h4 class="header indigo-text section-title">
+			<span><i class="material-icons">search</i>Resultado</span>
+		</h4>
 
-		<p>Resultados da busca pelo nome</p>
 		<c:forEach items="${liticoList}" var="litico">
-			<div class="row">
-				<div class="col s12 m5">
-					<div class="card-panel z-depth-1">
-						<span class="black-text">
-							<p>${litico.nome}</p>
-							<p>${litico.partido}</p>
+			<div id="profile-card" class="col m6">
+				<div class="card #f5f5f5 grey lighten-4">
+					<div class="card-content">
+						<img src="../resources/imagens/felipePequeno.jpg" alt=""
+							class="circle responsive-img activator card-profile-image">
+						<a
+							class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+							<i class="mdi-action-account-circle"></i> <
+						</a> <span class="card-title activator grey-text text-darken-4">
+							${litico.nome } </span>
+
+						<p>
+							<i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+							Presidente
+						</p>
+						<p>
+							<i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+							${litico.partido }
+						</p>
+						<p>
+							<i class="mdi-communication-email cyan-text text-darken-2"></i>
+							mail@domain.com
+						</p>
+
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">${litico.nome }<i
+							class="mdi-navigation-close right"></i>
 						</span>
+						<p>Mais informações do politico</p>
+						<p>
+							<i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+							Presidente
+						</p>
+						<p>
+							<i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+							+5511 9999-9999
+						</p>
+						<p>
+							<i class="mdi-communication-email cyan-text text-darken-2"></i>
+							mail@domain.com
+						</p>
+						<p>
+							<i class="mdi-social-cake cyan-text text-darken-2"></i> 21
+							Dezembro 1988
+						</p>
+						<p>
 					</div>
 				</div>
 			</div>

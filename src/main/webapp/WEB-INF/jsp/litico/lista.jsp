@@ -49,7 +49,7 @@
 	</nav>
 	<div class="row container">
 		<c:forEach items="${liticoList}" var="litico">
-			<div id="profile-card" class="card col m6">
+			<div id="profile-card" class="col m6">
 				<div class="card #f5f5f5 grey lighten-4">
 					<div class="card-content">
 						<img src="../resources/imagens/felipePequeno.jpg" alt=""
@@ -110,25 +110,6 @@
 			</div>
 		</c:forEach>
 	</div>
-	<%-- 	<c:forEach items="${liticoList}" var="litico"> --%>
-	<!-- 		<ul class="collection container"> -->
-	<!-- 			<li class="collection-item avatar"><img src="#" alt="" -->
-	<!-- 				class="circle"> <span class="title"><a -->
-	<%-- 					href="<c:url value="/liticos/${litico.id}"/>"> ${litico.nome } --%>
-	<!-- 				</a></span> -->
-
-	<!-- 				<p> -->
-	<%-- 					${litico.partido } <br> --%>
-	<!-- 				</p> -->
-
-	<%-- 				<form action="<c:url value="/liticos/${litico.id}"/>" method="POST" --%>
-	<!-- 					class="secondary-content"> -->
-	<!-- 					<a class="btn-floating halfway-fab waves-effect waves-light red" -->
-	<!-- 						name="_method" value="DELETE"><i class="material-icons">delete</i></a> -->
-
-	<!-- 				</form></li> -->
-	<!-- 		</ul> -->
-	<%-- 	</c:forEach> --%>
 
 	<footer class="page-footer green">
 	<div class="container">
