@@ -1,5 +1,5 @@
 # FaceLitoco
-
+> Pagina inicial local http://localhost:8080/facelitico/liticos
 > Endereço na Amazon: http://
 
 # Archetype

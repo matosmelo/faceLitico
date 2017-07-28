@@ -39,8 +39,9 @@
 	<div class="nav-wrapper green container">
 		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
+			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
 			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
+			<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
 			<li><a class="dropdown-button" href="#!"
 				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 		</ul>
@@ -54,9 +55,8 @@
 					<div class="card-content">
 						<img src="../resources/imagens/felipePequeno.jpg" alt=""
 							class="circle responsive-img activator card-profile-image">
-						<a
-							class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
-							<i class="mdi-action-account-circle"></i> <
+						<a class="activator btn-move-up waves-effect waves-light right">
+							<i class="material-icons black-text">more_vert</i>
 						</a> <span class="card-title activator grey-text text-darken-4"><a
 							href="<c:url value="/liticos/${litico.id}"/>"> ${litico.nome }
 						</a></span>
