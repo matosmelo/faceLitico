@@ -35,5 +35,6 @@
 
 		<!-- Entidade -->
 		<mapping class="br.com.matosmelo.facelitico.model.Litico" />
+		<mapping class="br.com.matosmelo.facelitico.model.Usuario" />
 	</session-factory>
 </hibernate-configuration>

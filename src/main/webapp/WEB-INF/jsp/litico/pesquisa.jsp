@@ -37,7 +37,6 @@
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
-	</div>
 	<div class="nav-wrapper green container">
 		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
@@ -47,20 +46,16 @@
 			<li><a class="dropdown-button" href="#!"
 				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 		</ul>
-		</ul>
 	</div>
 	</nav>
 
 	<div class="row">
-			<div class="row">
-				<div class="input-field col s12">
-					<form action="<c:url value="/liticos/busca"/>">
-						<input type="text" name="nome" placeholder="Digite aqui a busca">
-						<button class="material-icons type=" submit" name="action">search</button>
-					</form>
-				</div>
-			</div>
-
+		<div class="input-field col s12">
+			<form action="<c:url value="/liticos/busca"/>">
+				<input type="text" name="nome" placeholder="Digite aqui a busca">
+				<button class="material-icons type=" submit" name="action">search</button>
+			</form>
+		</div>
 	</div>
 
 	<footer class="page-footer green">
