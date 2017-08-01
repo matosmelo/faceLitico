@@ -9,14 +9,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-<title>Resultado da busca</title>
+<title>Facelitico</title>
 
 <!-- CSS  -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <link href="../resources/css/materialize.css" type="text/css"
 	rel="stylesheet" media="screen,projection" />
-<link href="../resources/css/style.css" type="text/css" rel="stylesheet"
+<link href=",,/resources/css/style.css" type="text/css" rel="stylesheet"
 	media="screen,projection" />
 </head>
 <body>
@@ -32,27 +32,31 @@
 	<nav class="green">
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="<c:url value="#"/>">Pesquisa</a></li>
-		<li><a href="<c:url value="/usuarios"/>">Lista</a></li>
+		<li><a href="<c:url value="#"/>">Lista</a></li>
 		<li><a href="<c:url value="#"/>">Novo litico</a></li>
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
-	</div>
 	<div class="nav-wrapper green container">
-		<a href="<c:url value="#"/>" class="brand-logo">Home</a>
+		<a href="<c:url value="/usuarios"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="<c:url value="/usuarios"/>">Listar</a></li>
+			<li><a href="<c:url value="#"/>">Listar</a></li>
 			<li><a href="<c:url value="#"/>">Pesquisar</a></li>
 			<li><a href="<c:url value="#"/>">Novo litico</a></li>
 			<li><a class="dropdown-button" href="#!"
 				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 		</ul>
-		</ul>
 	</div>
 	</nav>
 
-	<!-- 	Mostra valores da pagina lista  -->
-	<%-- 	<%@ include file="lista.jsp"%> --%>
+	<div class="row">
+		<div class="input-field col s12">
+			<form action="<c:url value="/usuario/busca"/>">
+				<input type="text" name="nome" placeholder="Digite aqui a busca">
+				<button class="material-icons type=" submit" name="action">search</button>
+			</form>
+		</div>
+	</div>
 
 	<footer class="page-footer green">
 	<div class="container">

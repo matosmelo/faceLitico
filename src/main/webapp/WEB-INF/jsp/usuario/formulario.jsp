@@ -32,7 +32,7 @@
 	<nav class="green">
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="<c:url value="#"/>">Pesquisa</a></li>
-		<li><a href="<c:url value="#"/>">Lista</a></li>
+		<li><a href="<c:url value="/usuarios"/>">Lista</a></li>
 		<li><a href="<c:url value="#"/>">Novo litico</a></li>
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
@@ -41,7 +41,7 @@
 	<div class="nav-wrapper green container">
 		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="<c:url value="#"/>">Listar</a></li>
+			<li><a href="<c:url value="/usuarios"/>">Listar</a></li>
 			<li><a href="<c:url value="#"/>">Pesquisar</a></li>
 			<li><a href="<c:url value="#"/>">Novo litico</a></li>
 			<li><a class="dropdown-button" href="#!"

@@ -3,6 +3,7 @@ package br.com.matosmelo.facelito.controller;
 import java.util.List;
 
 import br.com.caelum.vraptor.Get;
+import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
@@ -29,12 +30,6 @@ public class UsuarioController {
 		return dao.listaTudo();
 	}
 
-//	// Lista os liticos
-//	@Get("/liticos/lista")
-//	public List<Litico> lista() {
-//		return dao.listaTudo();
-//	}
-//
 	// Mostra o formulario usuario
 	@Get("/usuario/novo")
 	public void formulario() {
@@ -76,14 +71,14 @@ public class UsuarioController {
 //		result.redirectTo(this).lista();
 //	}
 //
-//	@Get("/liticos/pesquisa")
-//	public void pesquisa() {
-//	}
-//
-//	@Get
-//	@Path("/liticos/busca")
-//	public List<Litico> busca(String nome) {
-//		return dao.busca(nome);
-//
-//	}
+	@Get("/usuario/pesquisa")
+	public void pesquisa() {
+	}
+
+	@Get
+	@Path("/usuario/busca")
+	public List<Usuario> busca(String nome) {
+		return dao.busca(nome);
+
+	}
 }

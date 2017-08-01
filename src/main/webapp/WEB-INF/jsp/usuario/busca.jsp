@@ -37,22 +37,71 @@
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
-	</div>
 	<div class="nav-wrapper green container">
-		<a href="<c:url value="#"/>" class="brand-logo">Home</a>
+		<a href="<c:url value="/usuarios"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="<c:url value="/usuarios"/>">Listar</a></li>
+			<li><a href="<c:url value="#"/>">Listar</a></li>
 			<li><a href="<c:url value="#"/>">Pesquisar</a></li>
 			<li><a href="<c:url value="#"/>">Novo litico</a></li>
 			<li><a class="dropdown-button" href="#!"
 				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
-		</ul>
 		</ul>
 	</div>
 	</nav>
 
 	<!-- 	Mostra valores da pagina lista  -->
 	<%-- 	<%@ include file="lista.jsp"%> --%>
+	<div id="resultadoBusca" class="row container">
+		<c:forEach items="${usuarioList}" var="usuario">
+			<div id="profile-card" class="col m6">
+				<div class="card #f5f5f5 grey lighten-4">
+					<div class="card-content">
+						<img src="../resources/imagens/felipePequeno.jpg" alt=""
+							class="circle responsive-img activator card-profile-image">
+						<a class="activator btn-move-up waves-effect waves-light right">
+							<i class="material-icons black-text">more_vert</i>
+						</a> <span class="card-title activator grey-text text-darken-4">
+							${usuario.nome } </span>
+						<p>
+							<i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+							Presidente
+						</p>
+						<p>
+							<i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+							${usuario.email }
+						</p>
+						<p>
+							<i class="mdi-communication-email cyan-text text-darken-2"></i>
+							mail@domain.com
+						</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">${usuario.nome }<i
+							class="mdi-navigation-close right"></i>
+						</span>
+						<p>Mais informações do politico</p>
+						<p>
+							<i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+							Presidente
+						</p>
+						<p>
+							<i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+							+5511 9999-9999
+						</p>
+						<p>
+							<i class="mdi-communication-email cyan-text text-darken-2"></i>
+							mail@domain.com
+						</p>
+						<p>
+							<i class="mdi-social-cake cyan-text text-darken-2"></i> 21
+							Dezembro 1988
+						</p>
+						<p>
+					</div>
+				</div>
+			</div>
+		</c:forEach>
+	</div>
 
 	<footer class="page-footer green">
 	<div class="container">
