@@ -37,7 +37,7 @@
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
 	<div class="nav-wrapper green container">
-		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
+		<a href="<c:url value="/"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
 			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
@@ -99,8 +99,8 @@
 						<p>
 						<form action="<c:url value="/liticos/${litico.id}"/>"
 							method="POST" class="secondary-content">
-							<a class="btn-floating halfway-fab waves-effect waves-light red"
-								name="_method" value="DELETE"><i class="material-icons">delete</i></a>
+							<button class="btn-floating halfway-fab waves-effect waves-light red"
+								name="_method" value="DELETE"><i class="material-icons">delete</i></button>
 
 						</form>
 

@@ -38,7 +38,7 @@
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
 		class="material-icons">menu</i></a>
 	<div class="nav-wrapper green container">
-		<a href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
+		<a href="<c:url value="/"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
 			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>

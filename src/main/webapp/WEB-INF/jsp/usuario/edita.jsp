@@ -31,19 +31,18 @@
 
 	<nav class="green">
 	<ul id="nav-mobile" class="side-nav">
-		<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisa</a></li>
-		<li><a href="<c:url value="/liticos/lista"/>">Lista</a></li>
-		<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
+		<li><a href="<c:url value="/usuario/pesquisa"/>">Pesquisa</a></li>
+		<li><a href="<c:url value="/usuarios"/>">Listar</a></li>
+		<li><a href="<c:url value="/usuario/novo"/>">Novo usuario</a></li>
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
-		class="material-icons">menu</i></a>
-	</div>
+		class="material-icons">menu usuarios</i></a>
 	<div class="nav-wrapper green container">
-		<a href="<c:url value="/"/>" class="brand-logo">Home</a>
+		<a href="<c:url value="/usuarios"/>" class="brand-logo">Home usuarios</a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
-			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
-			<li><a href="<c:url value="/liticos/novo"/>">Novo litico</a></li>
+			<li><a href="<c:url value="/usuarios"/>">Listar</a></li>
+			<li><a href="<c:url value="/usuario/pesquisa"/>">Pesquisar</a></li>
+			<li><a href="<c:url value="/usuario/novo"/>">Novo usuario</a></li>
 			<li><a class="dropdown-button" href="#!"
 				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 		</ul>
@@ -60,21 +59,29 @@
 	</div>
 
 	<div class="row">
-		<form class="col s12" action="<c:url value="/liticos/${litico.id}"/>"
+		<form class="col s12" action="<c:url value="/usuario/${usuario.id}"/>"
 			method="POST">
 			<div class="row">
 				<div class="input-field col s12">
-					<input type="hidden" name="litico.id" value="${litico.id}"/> <label
+					<input type="hidden" name="usuario.id" value="${usuario.id}"/> <label
 						for="nome">Nome:</label> <input id="nome" type="text"
-						class="validate" name="litico.nome" value="${litico.nome}"/>
+						class="validate" name="usuario.nome" value="${usuario.nome}"/>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
 
-					<label for="partido">Partido:</label> <input id="partido"
-						type="text" class="validate" name="litico.partido"
-						value="${litico.partido}" />
+					<label for="partido">Email:</label> <input id="Email"
+						type="text" class="validate" name="usuario.email"
+						value="${usuario.email}" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+
+					<label for="partido">Senha:</label> <input id="senha"
+						type="text" class="validate" name="usuario.senha"
+						value="${usuario.senha}" />
 
 					<button type="submit" name="_method" value="PUT">Enviar</button>
 				</div>

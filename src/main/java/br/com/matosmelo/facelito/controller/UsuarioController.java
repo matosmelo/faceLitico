@@ -2,9 +2,11 @@ package br.com.matosmelo.facelito.controller;
 
 import java.util.List;
 
+import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
+import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
@@ -44,33 +46,32 @@ public class UsuarioController {
 		// Retorna para lista apos adicao
 		result.redirectTo(this).usuarios();
 	}
-//
-//	// Edita litico
-//	@Get("/liticos/{id}")
-//	public Litico edita(Long id) {
-//		return dao.carrega(id);
-//
-//	}
-//
-//	// Altera litico
-//	@Put("/liticos/{litico.id}")
-//	public void altera(Litico litico) {
-//		validator.validate(litico);
-//		validator.onErrorUsePageOf(UsuarioController.class)
-//				.edita(litico.getId());
-//
-//		dao.atualiza(litico);
-//		result.redirectTo(this).lista();
-//	}
-//
-//	// Remove litico
-//	@Delete("/liticos/{id}")
-//	public void remove(Long id) {
-//		Litico litico = dao.carrega(id);
-//		dao.remove(litico);
-//		result.redirectTo(this).lista();
-//	}
-//
+
+	// Edita usuario
+	@Get("/usuario/{id}")
+	public Usuario edita(Long id) {
+		return dao.carrega(id);
+	}
+
+	// Altera litico
+	@Put("/usuario/{usuario.id}")
+	public void altera(Usuario usuario) {
+		validator.validate(usuario);
+		validator.onErrorUsePageOf(UsuarioController.class).edita(
+				usuario.getId());
+
+		dao.atualiza(usuario);
+		result.redirectTo(this).usuarios();
+	}
+
+	// Remove litico
+	@Delete("/usuario/{id}")
+	public void remove(Long id) {
+		Usuario usuario = dao.carrega(id);
+		dao.remove(usuario);
+		result.redirectTo(this).usuarios();
+	}
+
 	@Get("/usuario/pesquisa")
 	public void pesquisa() {
 	}

@@ -27,7 +27,7 @@ public class LiticoController {
 	}
 
 	// Index
-	@Get("liticos")
+	@Get("/")
 	public void index() {
 	}
 

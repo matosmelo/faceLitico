@@ -31,19 +31,18 @@
 
 	<nav class="green">
 	<ul id="nav-mobile" class="side-nav">
-		<li><a href="<c:url value="#"/>">Pesquisa</a></li>
-		<li><a href="<c:url value="/usuarios"/>">Lista</a></li>
-		<li><a href="<c:url value="#"/>">Novo litico</a></li>
+		<li><a href="<c:url value="/usuario/pesquisa"/>">Pesquisa</a></li>
+		<li><a href="<c:url value="/usuarios"/>">Listar</a></li>
+		<li><a href="<c:url value="/usuario/novo"/>">Novo usuario</a></li>
 	</ul>
 	<a href="#" data-activates="nav-mobile" class="button-collapse"><i
-		class="material-icons">menu</i></a>
-	</div>
+		class="material-icons">menu usuarios</i></a>
 	<div class="nav-wrapper green container">
-		<a href="<c:url value="#"/>" class="brand-logo">Home</a>
+		<a href="<c:url value="/usuarios"/>" class="brand-logo">Home usuarios</a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/usuarios"/>">Listar</a></li>
-			<li><a href="<c:url value="#"/>">Pesquisar</a></li>
-			<li><a href="<c:url value="#"/>">Novo litico</a></li>
+			<li><a href="<c:url value="/usuario/pesquisa"/>">Pesquisar</a></li>
+			<li><a href="<c:url value="/usuario/novo"/>">Novo usuario</a></li>
 			<li><a class="dropdown-button" href="#!"
 				data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 		</ul>

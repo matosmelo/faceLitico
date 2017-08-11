@@ -27,6 +27,7 @@
 		<li><a href="#!">Sobre</a></li>
 		<li class="divider"></li>
 		<li><a href="#!">Monkey</a></li>
+		<li><a href="usuarios">Usuarios</a></li>
 	</ul>
 
 	<nav class="green">
@@ -39,7 +40,7 @@
 		class="material-icons">menu</i></a>
 	</div>
 	<div class="nav-wrapper green container">
-		<a id="logo-container" href="<c:url value="/liticos"/>" class="brand-logo">Home</a>
+		<a id="logo-container" href="<c:url value="/"/>" class="brand-logo">Home</a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="<c:url value="/liticos/lista"/>">Listar</a></li>
 			<li><a href="<c:url value="/liticos/pesquisa"/>">Pesquisar</a></li>
